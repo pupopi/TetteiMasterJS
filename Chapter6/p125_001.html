@@ -1,0 +1,32 @@
+<!-- 円弧を描く -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Canvasの基本</title>
+    <script>
+        window.onload = function(){
+            var canvas = document.getElementById("mycanvas");
+            var ctx = canvas.getContext("2d");
+
+
+            ctx.beginPath();
+            // 時計回り
+            ctx.arc(100, 100, 80, 30*Math.PI/180, 120*Math.PI/180, false);
+            ctx.stroke();
+            // 反時計回り
+            ctx.beginPath();
+            ctx.arc(100, 100, 80, 30*Math.PI/180, 120*Math.PI/180, true);
+            ctx.stroke();
+
+            //塗りつぶしはctx.stroke()の代わりにctx.fill()
+
+
+        }
+    </script>
+</head>
+<body>
+    <canvas id="mycanvas" width}="640" height="400"></canvas>
+</body>
+</html>
