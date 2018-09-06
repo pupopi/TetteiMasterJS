@@ -1,0 +1,37 @@
+<!-- 角丸の矩形を描く -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>角丸の矩形を描く</title>
+    <script>
+
+        //角丸の矩形を描く関数
+        function strokeRoundeRect(ctx, x, y, width, height, radius){
+            ctx.bginPath();
+            ctx.moveTo(x+radius, y);
+            ctx.arcTo(x+width, y, x+width, y+height, radius);
+            ctx.arcTo(x+width, y+height, x, y+height, radius);
+            ctx.arcTo(x, y+height, x, y, radius);
+            ctx.arcTo(x, y, x+width, y, radius);
+            ctx.stroke();
+        }
+
+        window.onload = function(){
+            var canvas = document.getElementById("mycanvas");
+            var ctx = canvas.getContext("2d");
+
+
+            //上記関数を利用
+            strokeRoundeRect(ctx, 10, 10, 100, 80, 10);
+            strokeRoundeRect(ctx, 150, 10, 100, 80, 30);
+
+
+        }
+    </script>
+</head>
+<body>
+    <canvas id="mycanvas" width}="640" height="400"></canvas>
+</body>
+</html>
