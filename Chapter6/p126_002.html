@@ -1,0 +1,27 @@
+<!-- コーナーを円弧にして線分で結ぶ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>コーナーを円弧にして線分で結ぶ</title>
+    <script>
+        window.onload = function(){
+            var canvas = document.getElementById("mycanvas");
+            var ctx = canvas.getContext("2d");
+
+
+            ctc.beginPath();
+            ctx.moveTo(10, 10);
+            ctx.arcTo(250, 10, 250, 160, 50);
+            ctx.lineTo(250, 160);
+            ctx.stroke();
+
+
+        }
+    </script>
+</head>
+<body>
+    <canvas id="mycanvas" width}="640" height="400"></canvas>
+</body>
+</html>
