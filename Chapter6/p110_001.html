@@ -1,0 +1,25 @@
+<!-- コンソールにDOMで時刻表示 -->
+
+<!DOCUMENT TYPE>
+<html>
+<head>
+    <meta charset="UTF-8">
+     <script>
+         function displayTime(){
+             var d = new Date();
+             console.log("現在、"+d.toLocalScaleString()+"です。");
+         }
+        //Windowオブジェクトのonloadプロパティに関数を設定
+        //この関数は文書読み込み終了時に実行される
+        window.onload = function(){
+            //input要素オブジェクトを取得
+            var button = document.getElementById("button");
+            //input要素に対してクリックしたときのイベントパンドラを登録
+            button.onclick = displayTime;
+         };
+    </script>
+</head>
+<body>
+    <input type="button" value="click" id="button">
+</body>
+</html>
