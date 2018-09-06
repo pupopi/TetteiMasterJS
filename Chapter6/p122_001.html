@@ -1,0 +1,30 @@
+<!-- 矩形の描画 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Canvasの基本</title>
+    <script>
+        window.onload = function(){
+            var canvas = document.getElementById("mycanvas");
+            var ctx = canvas.getContext("2d");
+
+
+            //矩形の枠線
+            ctx.strokeRect(10, 10, 200, 150);
+
+            //矩形を塗りつぶす
+            ctx.fillRect(50, 40, 120, 90);
+
+            //矩形の領域を消去し透明にする
+            ctx.clearRect(90, 65, 40, 40);
+
+
+        }
+    </script>
+</head>
+<body>
+    <canvas id="mycanvas" width}="640" height="400"></canvas>
+</body>
+</html>
