@@ -2,10 +2,10 @@
 
 var obj = {
     say: function() {
-        console.log(this);
-        var f = function() { console.log(this); };
+        console.log(this);                              // →[object Object]
+        var f = function() { console.log(this); };      // →[object Window]
         f();
-        var g = () => console.log(this);
+        var g = () => console.log(this);                // →[object Object]
         g();
     }
 };
