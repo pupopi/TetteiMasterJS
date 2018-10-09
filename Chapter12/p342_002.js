@@ -11,3 +11,8 @@ while( (result = tel.exec(text)) != null ) {
 // →    010-1234-5678 010 1234 5678
 //      020-550-7809 020 550 7809
 //      030-4321-9876 030 4321 9876
+
+// lastIndexの数字を変更すれば任意の文字位置から検索可能
+tel.lastIndex = 0;
+result = tel.exec(text);
+console.log(result[0]);     // → 010-1234-5678
