@@ -1,0 +1,23 @@
+<!-- name属性の値でノードを取得する -->
+
+<body>
+    <form>
+        <input type="checkbox" name="dog" value="pome">ポメラニアン<br>
+        <input type="checkbox" name="dog" value="daru">ダルメシアン<br>
+        <input type="checkbox" name="dog" value="bueu">ブルドッグ<br>
+    </form>
+    <script>
+        var dogs = document.getElementsByName("dog");
+        dogs[1].value = "corgi";
+        dogs[1].nextSibling.nodeValue = "コーギー";
+        for(var i=0; i<dogs.length; i++) {
+            console.log(i + "番目のvalue値: " + dogs[i].value);
+        }
+    </script>
+</body>
+<!--
+→
+0番目のvalue値: pome
+1番目のvalue値: corgi
+2番目のvalue値: buru
+-->
