@@ -1,0 +1,17 @@
+<!-- textContent、InnerText -->
+
+<body>
+        <p id = "cards">&hearts;ハートは、<em>僧侶</em>を表します。</p>
+        <script>
+            var para = document.getElementById("cards");
+            console.log(para.textContent);
+            // → ♥ハートは、僧侶を表します。
+            para.textContent = "&diams;ダイヤは、<strong>商人</strong>を表します。";
+            console.log(para.innerHTML);
+            // → &diams;ダイヤは、<strong>商人</strong>を表します。
+            console.log(para.textContent);
+            // → &diams;ダイヤは、<strong>商人</strong>を表します。        
+        </script>
+    </body>
+
+    <!-- textContentはscript要素内のテキストを返すが、innerTextは返さない -->
