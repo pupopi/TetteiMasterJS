@@ -1,0 +1,11 @@
+<!-- 要素名でノードを取得する -->
+
+<body>
+    <div>1つ目のdiv</div>
+    <div>2つ目のdiv</div>
+    <div>3つ目のdiv</div>
+    <script>
+        var elements = document.getElementsByTagName("div");
+        elements[2].innerHTML = "ここを変更";       // 3つ目のdiv要素の要素内容を変更
+    </script>
+</body>
