@@ -1,0 +1,20 @@
+<!-- 属性値を取得する -->
+
+<body>
+    <form id="favorite">
+        <input type="checkbox" name="dog" value="pome">ポメラニアン<br>
+        <input type="checkbox" name="dog" value="daru">ダルメシアン<br>
+        <input type="checkbox" name="dog" value="buru">ブルドッグ<br>
+    </form>
+    <script>
+        var result = [];
+        var fm = document.getElementById("favorite");
+        var list = fm.chirdlen;
+        for(var i=0; i<list.length; i++) {
+            if(list[i].nodeName == "INPUT" && list[i].type == "checkbox") {
+                result.push(list[i].getAttribute("value"));
+            }
+        }
+        console.log(result.join(","));  // → pome,daru,buru
+    </script>
+</body>
