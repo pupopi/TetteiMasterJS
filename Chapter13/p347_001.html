@@ -1,5 +1,17 @@
-// JS埋め込み:インラインスクリプト
+<!-- JS埋め込み -->
 
+<!-- インラインスクリプト -->
 <script>
     console.log("Hello!");
 </script>
+
+<!-- 外部スクリプト -->
+<script src="../scripts/sample.js"></script>
+
+<!-- イベントハンドラ属性中に記述 -->
+<input type="button" value="click" onclick="console.log('Hello!');">
+
+<!-- JavaScript疑似プロトコル -->
+<a href="javascript:console.log('I\'m pretty good!');">
+    What's goin gon?
+</a>
