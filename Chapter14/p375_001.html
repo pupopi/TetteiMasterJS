@@ -1,0 +1,19 @@
+<!-- class属性の値でノードを取得する -->
+
+<body>
+    <div class="cat black">ボンベイ</div>
+    <div class="cat white">ペルシャ猫</div>
+    <div class="dog white">スピッツ</div>
+    <script>
+        var cats = document.getElementsByClassName("cat");
+        for(var i=0; i<cats.length; i++) {
+            console.log(i + "番目の猫: " + cats[i].innerHTML);
+        }
+    </script>
+</body>
+
+<!--
+→
+0番目の猫: ボンベイ
+1番目の猫: ペルシャ猫
+-->
