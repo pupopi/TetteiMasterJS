@@ -1,0 +1,15 @@
+<!-- 指定した子ノードの前に挿入する:insertBefore -->
+
+<body>
+        <ul id="doglist">
+            <li>ポメラニアン</li>
+            <li>ダルメシアン</li>
+        </ul>
+        <script>
+            var doglist = document.getElementById("doglist");
+            var element = document.createElement("li");                  // li要素オブジェクトを作成
+            var text = document.createTextNode("ブルドッグ");             // テキストノードを作成
+            doglist.appendChild(element, doglist.children[1]);           // 2番目の子要素の前に挿入
+            element.appendChild(text);                          
+        </script>
+    </body>
