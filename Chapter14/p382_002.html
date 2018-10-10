@@ -1,0 +1,13 @@
+<!-- innerHTMLプロパティ -->
+
+<body>
+    <p id = "cards">&hearts;ハートは、<em>僧侶</em>を表します。</p>
+    <script>
+        var para = document.getElementById("cards");
+        console.log(para.innerHTML)
+        // → ♥ハートは、僧侶を表します。
+        para.innerHTML = "&diams;ダイヤは、<strong>商人</strong>を表します。";
+        console.log(para.innerHTML);
+        // → ♦ダイヤは、商人を表します。        
+    </script>
+</body>
