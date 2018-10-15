@@ -1,0 +1,17 @@
+<!-- クラスの制御によるスタイルの変更 -->
+
+<script>
+    var element = document.getElementById("title");
+    element.onmouseover = function() {
+        element.className = "emphasize";
+    };
+    element.onmouseout = function() {
+        element.className = "";
+    }
+</script>
+<body>
+    <h1 id="title">JavaScript</h1>
+    .emphasize{
+        background-color:ponk;
+    }
+</body>
