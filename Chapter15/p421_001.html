@@ -1,0 +1,9 @@
+<!-- デフォルトの動作をキャンセルする:preventDefault -->
+
+<a id="anchor" href="http://tokyo-skytree.jp">スカイツリー</a>
+<script>
+    var anchor = document.getElementById("anchor");
+    anchor.addEventListener("click", function(e) {
+        if( !confirm("ページを移動してもよろしいですか？") ) e.preventDefault();
+    }, false);
+</script>
