@@ -15,7 +15,7 @@
             var color = elt("input", {type: "color"});
             // 全消去ボタン
             var clear = elt("input", {type: "button", value: "全消去"});
-            clear.onckick = function(e) {
+            clear.onclick = function(e) {
                 cells.forEach(function(td){ td.style.backgroundColor = "white"; });
             };
             // エディタ画面のテーブル
