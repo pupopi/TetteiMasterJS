@@ -1,0 +1,26 @@
+<!-- readyStateプロパティ値の変更を見る -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta chaeset = "UTF-8">
+<title>Ajaxの簡単な例</title>
+<script>
+    window.onload = function() {
+        // XMLHttpRequestオブジェクトを生成
+        var req = new XMLHttpRequest();
+        // ここから下が変更点
+        console.log("A: readyState = "+ req.readyState);
+        req.onreadystatechange = function() {
+            console.log("B: redayState = " + req.readyState);
+        };
+        // リクエストを送信して、通信を開始
+        req.open("GET", "data.text");
+        req.send(null);
+    };
+</script>
+</head>
+<body>
+    <p id="view"></p>
+</body>
+</html>
