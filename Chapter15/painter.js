@@ -143,7 +143,7 @@ var colorInput;     // Firefox用のchangeイベント対策用にinpur[type="co
 // * ペイントツールの選択
 controls.painter = function(ctx) {
     var DEFAULT_TOOL = 0;
-    var select = elt("select". null);
+    var select = elt("select", null);
     var label = elt("label", null, "描画ツール:", select);
     for(var name in paintTools) {
         select.appendChild(elt("option", {value: name}, name));
@@ -174,7 +174,7 @@ controls.brushsize = function(ctx) {
     }
     select.selectedIndex = 2;
     ctx.lineWidth = size[select.selectedIndex];
-    var label = elt("label", "null", " 線幅:", select);
+    var label = elt("label", null, " 線幅:", select);
     select.addEventListener("change", function(e) {
         ctx.lineWidth = this.value;
     }, false);

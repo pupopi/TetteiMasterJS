@@ -5,9 +5,10 @@
  * 与えられた名前(name)、属性(attributes)、子ノードを持つ要素を作成して返す関数
  * ---------------------------------------------------------------------------------*/
 
-function elt(name, attributes) {
+ function elt(name, attributes) {
     var node = document.createElement(name);
-    if( attributes ) {
+    if(attributes){
+        console.log(typeof attributes)
         for(var attr in attributes) {
             if(attributes.hasOwnProperty(attr)) {
                 node.setAttribute(attr, attributes[attr]);
