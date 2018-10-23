@@ -11,7 +11,7 @@
         var req = new XMLHttpRequest();
         // ここから下が変更点
         req.addEventListener("error", function() {
-            document.getElementById("view").innerHTML = "サーバーエラー発生しました";
+            document.getElementById("view").innerHTML = "サーバーエラーが発生しました";
         }, false);
         // リクエストを送信して、通信を開始
         req.open("GET", "data.text");
