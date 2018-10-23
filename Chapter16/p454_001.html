@@ -1,0 +1,25 @@
+<!-- loadイベントで書き換え -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta chaeset = "UTF-8">
+<title>Ajaxの簡単な例</title>
+<script>
+    window.onload = function() {
+        // XMLHttpRequestオブジェクトを生成
+        var req = new XMLHttpRequest();
+        // ここから下が変更点
+        req.addEventListener("load", function() {
+            document.getElementById("view").innerHTML = req.responseText;
+        }, false);
+        // リクエストを送信して、通信を開始
+        req.open("GET", "data.text");
+        req.send(null);
+    };
+</script>
+</head>
+<body>
+    <p id="view"></p>
+</body>
+</html>
