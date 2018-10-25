@@ -8,7 +8,12 @@ function Ellipse(a, b) {
 Ellipse.prototype.getArea = function() {
     return Math.PI*this.a*this.b;
 };
-// Object.prototype.toStringうぃオーバーライド
+// Object.prototype.toStringをオーバーライド
+// オーバーライド＝親クラスのメソッドを子クラスで上書きする
 Ellipse.prototype.toString = function() {
     return "Ellipse" + this.a + " " + this.b;
 };
+var ellispe = new Ellipse(5, 3);
+
+console.log(ellispe.getArea());         // → 47.12388980384689
+console.log(ellispe.toString());        // → Ellipse5 3
